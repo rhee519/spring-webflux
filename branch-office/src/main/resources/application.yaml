@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: branch-office
+server:
+  port: 7070
