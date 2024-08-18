@@ -26,6 +26,7 @@ subprojects {
 
     dependencies {
         implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+        implementation("io.netty:netty-resolver-dns-native-macos:4.1.96.Final:osx-aarch_64")
     }
 
     java {
