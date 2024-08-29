@@ -6,3 +6,4 @@ rootProject.name = "spring-webflux"
 include("model")
 include("head-office")
 include("branch-office")
+include("example")
