@@ -1,4 +1,4 @@
-package com.kakao.example
+package com.kakao.example.ex9
 
 import lombok.extern.slf4j.Slf4j
 import org.slf4j.LoggerFactory

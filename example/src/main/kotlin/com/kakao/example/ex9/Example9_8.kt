@@ -1,4 +1,4 @@
-package com.kakao.example
+package com.kakao.example.ex9
 
 import lombok.extern.slf4j.Slf4j
 import org.slf4j.LoggerFactory
@@ -11,7 +11,6 @@ class Example9_8 {
 
         /**
          * Sinks.many() Example (unicast)
-         *
          *
          * output:
          * [2024-09-18T19:31:18.887+09:00][DEBUG] [main] Using Slf4j logging framework
@@ -41,8 +40,8 @@ class Example9_8 {
              * 	at reactor.core.publisher.Flux.subscribe(Flux.java:8805)
              * 	at reactor.core.publisher.Flux.subscribe(Flux.java:8729)
              * 	at reactor.core.publisher.Flux.subscribe(Flux.java:8672)
-             * 	at com.kakao.example.Example9_8$Companion.main(Example9_8.kt:27)
-             * 	at com.kakao.example.Example9_8.main(Example9_8.kt)
+             * 	at com.kakao.example.ex9.Example9_8$Companion.main(Example9_8.kt:27)
+             * 	at com.kakao.example.ex9.Example9_8.main(Example9_8.kt)
              */
 //            fluxView.subscribe { logger.info("# Subscriber2: $it") }
         }

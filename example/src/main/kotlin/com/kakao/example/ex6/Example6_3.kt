@@ -1,4 +1,4 @@
-package com.kakao.example
+package com.kakao.example.ex6
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import org.springframework.http.HttpEntity

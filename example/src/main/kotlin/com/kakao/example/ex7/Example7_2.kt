@@ -1,4 +1,4 @@
-package com.kakao.example
+package com.kakao.example.ex7
 
 import lombok.extern.slf4j.Slf4j
 import org.slf4j.LoggerFactory
@@ -17,16 +17,16 @@ class Example7_2 {
          * - delayElements() default scheduler 설정(parallel)에 의해 emit되는 데이터별로 다른 thread에서 실행됨
          *
          * output:
-         * 17:42:00.747 [main] INFO com.kakao.example.Example7_2$Companion -- Concert begins!
+         * 17:42:00.747 [main] INFO com.kakao.example.ex7.Example7_2$Companion -- Concert begins!
          * ----------
-         * 17:42:01.816 [parallel-1] INFO com.kakao.example.Example7_2$Companion -- # Subscriber 1 is watching: Justin Bieber
-         * 17:42:02.819 [parallel-2] INFO com.kakao.example.Example7_2$Companion -- # Subscriber 1 is watching: Ariana Grande
-         * 17:42:03.824 [parallel-3] INFO com.kakao.example.Example7_2$Companion -- # Subscriber 1 is watching: BTS
-         * 17:42:03.825 [parallel-3] INFO com.kakao.example.Example7_2$Companion -- # Subscriber 2 is watching: BTS
-         * 17:42:04.830 [parallel-4] INFO com.kakao.example.Example7_2$Companion -- # Subscriber 1 is watching: Taylor Swift
-         * 17:42:04.830 [parallel-4] INFO com.kakao.example.Example7_2$Companion -- # Subscriber 2 is watching: Taylor Swift
-         * 17:42:05.832 [parallel-5] INFO com.kakao.example.Example7_2$Companion -- # Subscriber 1 is watching: Lady Gaga
-         * 17:42:05.832 [parallel-5] INFO com.kakao.example.Example7_2$Companion -- # Subscriber 2 is watching: Lady Gaga
+         * 17:42:01.816 [parallel-1] INFO com.kakao.example.ex7.Example7_2$Companion -- # Subscriber 1 is watching: Justin Bieber
+         * 17:42:02.819 [parallel-2] INFO com.kakao.example.ex7.Example7_2$Companion -- # Subscriber 1 is watching: Ariana Grande
+         * 17:42:03.824 [parallel-3] INFO com.kakao.example.ex7.Example7_2$Companion -- # Subscriber 1 is watching: BTS
+         * 17:42:03.825 [parallel-3] INFO com.kakao.example.ex7.Example7_2$Companion -- # Subscriber 2 is watching: BTS
+         * 17:42:04.830 [parallel-4] INFO com.kakao.example.ex7.Example7_2$Companion -- # Subscriber 1 is watching: Taylor Swift
+         * 17:42:04.830 [parallel-4] INFO com.kakao.example.ex7.Example7_2$Companion -- # Subscriber 2 is watching: Taylor Swift
+         * 17:42:05.832 [parallel-5] INFO com.kakao.example.ex7.Example7_2$Companion -- # Subscriber 1 is watching: Lady Gaga
+         * 17:42:05.832 [parallel-5] INFO com.kakao.example.ex7.Example7_2$Companion -- # Subscriber 2 is watching: Lady Gaga
          */
         @JvmStatic
         fun main(args: Array<String>) {

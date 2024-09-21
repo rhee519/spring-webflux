@@ -1,4 +1,4 @@
-package com.kakao.example
+package com.kakao.example.ex6
 
 import reactor.core.publisher.Flux
 

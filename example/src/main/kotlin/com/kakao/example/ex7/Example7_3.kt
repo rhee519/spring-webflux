@@ -1,4 +1,4 @@
-package com.kakao.example
+package com.kakao.example.ex7
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import lombok.extern.slf4j.Slf4j
@@ -16,12 +16,12 @@ class Example7_3 {
         /**
          * output:
          * Cold Sequence Example
-         * 17:53:43.409 [reactor-http-nio-2] INFO com.kakao.example.Example7_3$Companion -- # datetime 1: 2024-09-18T17:53:43.273209+09:00
-         * 17:53:45.252 [reactor-http-nio-2] INFO com.kakao.example.Example7_3$Companion -- # datetime 2: 2024-09-18T17:53:45.143743+09:00
+         * 17:53:43.409 [reactor-http-nio-2] INFO com.kakao.example.ex7.Example7_3$Companion -- # datetime 1: 2024-09-18T17:53:43.273209+09:00
+         * 17:53:45.252 [reactor-http-nio-2] INFO com.kakao.example.ex7.Example7_3$Companion -- # datetime 2: 2024-09-18T17:53:45.143743+09:00
          * ----------
          * Hot Sequence Example
-         * 17:53:47.267 [reactor-http-nio-2] INFO com.kakao.example.Example7_3$Companion -- # datetime 1: 2024-09-18T17:53:47.157558+09:00
-         * 17:53:49.099 [main] INFO com.kakao.example.Example7_3$Companion -- # datetime 2: 2024-09-18T17:53:47.157558+09:00
+         * 17:53:47.267 [reactor-http-nio-2] INFO com.kakao.example.ex7.Example7_3$Companion -- # datetime 1: 2024-09-18T17:53:47.157558+09:00
+         * 17:53:49.099 [main] INFO com.kakao.example.ex7.Example7_3$Companion -- # datetime 2: 2024-09-18T17:53:47.157558+09:00
          */
         @JvmStatic
         fun main(args: Array<String>) {
