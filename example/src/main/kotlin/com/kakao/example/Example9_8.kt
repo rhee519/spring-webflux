@@ -10,7 +10,7 @@ class Example9_8 {
         private val logger = LoggerFactory.getLogger(this::class.java)
 
         /**
-         * Sinks.many() Example
+         * Sinks.many() Example (unicast)
          *
          *
          * output:
