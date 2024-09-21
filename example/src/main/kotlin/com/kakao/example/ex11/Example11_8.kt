@@ -9,7 +9,7 @@ import reactor.util.context.Context
 class Example11_8 {
     companion object {
         private val logger = LoggerFactory.getLogger(this::class.java)
-        const val HEADER_AUTH_TOKEN = "X-AUTH-TOKEN"
+        private const val HEADER_AUTH_TOKEN = "X-AUTH-TOKEN"
 
         data class Book(
             val isbn: String,
