@@ -3,7 +3,7 @@ package com.kakao.example.ex14
 import org.slf4j.LoggerFactory
 import reactor.core.publisher.Mono
 
-class Example14_1 {
+class Example14_1_Mono_JustOrEmpty {
     companion object {
         private val log = LoggerFactory.getLogger(this::class.java)
 

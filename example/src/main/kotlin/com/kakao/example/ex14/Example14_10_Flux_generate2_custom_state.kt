@@ -4,7 +4,7 @@ import org.slf4j.LoggerFactory
 import reactor.core.publisher.Flux
 import reactor.util.function.Tuples
 
-class Example14_10 {
+class Example14_10_Flux_generate2_custom_state {
     companion object {
         private val log = LoggerFactory.getLogger(this::class.java)
 

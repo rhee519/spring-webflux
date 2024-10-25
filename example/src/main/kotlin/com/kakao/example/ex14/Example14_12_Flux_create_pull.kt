@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory
 import reactor.core.publisher.BaseSubscriber
 import reactor.core.publisher.Flux
 
-class Example14_12 {
+class Example14_12_Flux_create_pull {
     companion object {
         private val log = LoggerFactory.getLogger(this::class.java)
         private var SIZE = 0

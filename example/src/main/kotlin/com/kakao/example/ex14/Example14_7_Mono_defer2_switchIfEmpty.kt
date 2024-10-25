@@ -5,7 +5,7 @@ import reactor.core.publisher.Mono
 import java.time.Duration
 import java.time.LocalDateTime
 
-class Example14_7 {
+class Example14_7_Mono_defer2_switchIfEmpty {
     companion object {
         private val log = LoggerFactory.getLogger(this::class.java)
 

@@ -5,7 +5,7 @@ import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 import reactor.core.scheduler.Schedulers
 
-class Example14_17 {
+class Example14_17_Flux_filterWhen {
     companion object {
         private val log = LoggerFactory.getLogger(this::class.java)
         private val vaccineMap = SampleData.getCovidVaccines()

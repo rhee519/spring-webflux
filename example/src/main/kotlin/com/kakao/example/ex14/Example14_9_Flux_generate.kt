@@ -3,7 +3,7 @@ package com.kakao.example.ex14
 import org.slf4j.LoggerFactory
 import reactor.core.publisher.Flux
 
-class Example14_9 {
+class Example14_9_Flux_generate {
     companion object {
         private val log = LoggerFactory.getLogger(this::class.java)
 

@@ -4,7 +4,7 @@ import org.slf4j.LoggerFactory
 import reactor.core.publisher.Flux
 import java.time.Duration
 
-class Example14_19 {
+class Example14_19_Flux_skip2_duration {
     companion object {
         private val log = LoggerFactory.getLogger(this::class.java)
 

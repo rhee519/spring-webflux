@@ -4,7 +4,7 @@ import org.slf4j.LoggerFactory
 import reactor.core.publisher.Mono
 import java.time.LocalDateTime
 
-class Example14_6 {
+class Example14_6_Mono_defer {
     companion object {
         private val log = LoggerFactory.getLogger(this::class.java)
 

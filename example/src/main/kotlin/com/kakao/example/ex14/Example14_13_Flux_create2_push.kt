@@ -2,14 +2,11 @@ package com.kakao.example.ex14
 
 import org.slf4j.LoggerFactory
 import reactor.core.publisher.Flux
-import reactor.core.publisher.FluxSink
 import reactor.core.scheduler.Schedulers
 
-class Example14_14 {
+class Example14_13_Flux_create2_push {
     companion object {
         private val log = LoggerFactory.getLogger(this::class.java)
-        private var start = 1
-        private var end = 4
 
         /**
          * ```
@@ -31,32 +28,29 @@ class Example14_14 {
          */
         @JvmStatic
         fun main(args: Array<String>) {
-            Flux.create(
-                { sink ->
-                    sink.onRequest { cnt ->
-                        log.info("# requested: $cnt")
-                        try {
-                            Thread.sleep(500)
-                            (start..end).forEach { sink.next(it) }
-                            start += 4
-                            end += 4
-                        } catch (e: InterruptedException) {
-                            sink.error(e)
-                        }
+            val priceEmitter = CryptoCurrencyPriceEmitter()
+            Flux.create { sink ->
+                priceEmitter.setListener(object : CryptoCurrencyPriceListener {
+                    override fun onPrice(priceList: List<Int>) {
+                        priceList.stream().forEach { sink.next(it) }
                     }
 
-                    sink.onDispose { log.info("clean up") }
-                },
-                FluxSink.OverflowStrategy.DROP
-            )
-                .subscribeOn(Schedulers.boundedElastic())
-                .publishOn(
-                    Schedulers.parallel(),
-                    2  // request 당 2개씩 consume하지만, 4개씩 emit되므로 나머지 2건은 OverflowStrategy.DROP에 의해 버려짐
+                    override fun onComplete() {
+                        sink.complete()
+                    }
+                })
+            }
+                .publishOn(Schedulers.parallel())
+                .subscribe(
+                    { log.info("# onNext: $it") },
+                    { error -> log.error("# onError: ${error.message}") },
+                    { log.info("# onComplete") }
                 )
-                .subscribe { log.info("# onNext: $it") }
 
             Thread.sleep(3000)
+            priceEmitter.flowInto()
+            priceEmitter.complete()
+            Thread.sleep(1000)
         }
     }
 }

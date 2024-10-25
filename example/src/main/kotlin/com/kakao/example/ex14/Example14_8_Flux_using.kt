@@ -4,7 +4,7 @@ import org.slf4j.LoggerFactory
 import reactor.core.publisher.Flux
 import java.io.File
 
-class Example14_8 {
+class Example14_8_Flux_using {
     companion object {
         private val log = LoggerFactory.getLogger(this::class.java)
 
