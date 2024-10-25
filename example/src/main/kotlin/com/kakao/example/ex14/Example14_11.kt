@@ -22,7 +22,7 @@ class Example14_11 {
          */
         @JvmStatic
         fun main(args: Array<String>) {
-            val btcPricesMap = SampleData.btcTopPricesPerYearMap()
+            val btcPricesMap = SampleData.getBtcTopPricesPerYearMap()
 
             Flux.generate({ 2015 }) { state, sink ->
                 if (state > 2021)

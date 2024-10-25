@@ -50,7 +50,7 @@ object SampleData {
     val subunitVaccines: List<Tuple2<CovidVaccine, Int>> = listOf(
         Tuples.of(CovidVaccine.Novavax, 2500000)
     )
-    val btcTopPricesPerYearMap: () -> Map<Int, Tuple2<Int, Long>> = {
+    val getBtcTopPricesPerYearMap: () -> Map<Int, Tuple2<Int, Long>> = {
         btcTopPricesPerYear
             .stream()
             .collect(
@@ -60,7 +60,7 @@ object SampleData {
                 )
             )
     }
-    val covidVaccines: () -> Map<CovidVaccine, Tuple2<CovidVaccine, Int>> = {
+    val getCovidVaccines: () -> Map<CovidVaccine, Tuple2<CovidVaccine, Int>> = {
         coronaVaccines
             .stream()
             .collect(
