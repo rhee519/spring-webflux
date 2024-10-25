@@ -71,46 +71,25 @@ object SampleData {
             )
     }
 
-    var nppMap: MutableMap<String, Mono<String>> = HashMap()
-    var morseCodeMap: MutableMap<String, String> = HashMap()
-    var morseCodes: Array<String> = arrayOf(
+    val nppMap = hashMapOf(
+        "Ontario" to Mono.just("Ontario Done").delayElement(Duration.ofMillis(1500L)),
+        "Vermont" to Mono.just("Vermont Done").delayElement(Duration.ofMillis(400L)),
+        "New Hampshire" to Mono.just("New Hampshire Done").delayElement(Duration.ofMillis(700L)),
+        "New Jersey" to Mono.just("New Jersey Done").delayElement(Duration.ofMillis(500L)),
+        "Ohio" to Mono.just("Ohio Done").delayElement(Duration.ofMillis(1000L)),
+        "Michigan" to Mono.just("Michigan Done").delayElement(Duration.ofMillis(200L)),
+        "Illinois" to Mono.just("Illinois Done").delayElement(Duration.ofMillis(300L)),
+        "Virginia" to Mono.just("Virginia Done").delayElement(Duration.ofMillis(600L)),
+        "North Carolina" to Mono.just("North Carolina Done").delayElement(Duration.ofMillis(800L)),
+        "Georgia" to Mono.just("Georgia Done").delayElement(Duration.ofMillis(900L))
+    )
+    val morseCodes = arrayOf(
         ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-",
         ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-",
         ".--", "-..-", "-.--", "--.."
     )
-
-    init {
-        nppMap["Ontario"] =
-            Mono.just("Ontario Done")
-                .delayElement(Duration.ofMillis(1500L))
-        nppMap["Vermont"] =
-            Mono.just("Vermont Done")
-                .delayElement(Duration.ofMillis(400L))
-        nppMap["New Hampshire"] = Mono.just("New Hampshire Done")
-            .delayElement(Duration.ofMillis(700L))
-        nppMap["New Jersey"] = Mono.just("New Jersey Done")
-            .delayElement(Duration.ofMillis(500L))
-        nppMap["Ohio"] =
-            Mono.just("Ohio Done")
-                .delayElement(Duration.ofMillis(1000L))
-        nppMap["Michigan"] =
-            Mono.just("Michigan Done")
-                .delayElement(Duration.ofMillis(200L))
-        nppMap["Illinois"] =
-            Mono.just("Illinois Done")
-                .delayElement(Duration.ofMillis(300L))
-        nppMap["Virginia"] =
-            Mono.just("Virginia Done")
-                .delayElement(Duration.ofMillis(600L))
-        nppMap["North Carolina"] = Mono.just("North Carolina Done")
-            .delayElement(Duration.ofMillis(800L))
-        nppMap["Georgia"] =
-            Mono.just("Georgia Done")
-                .delayElement(Duration.ofMillis(900L))
-
-        for (c in 'a'.code..('a'.code + 25)) {
-            morseCodeMap[morseCodes[c - ('z'.code - 25)]] = c.toString()
-        }
+    val morseCodeMap = (0 until 26).associate { offset ->
+        morseCodes[offset] to (offset + 'a'.code).toString()
     }
 
     val seoulInfected: List<Tuple2<Int, Int>> = listOf(
